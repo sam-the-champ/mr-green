@@ -1,6 +1,9 @@
 /* ===============================
    Root Theme Variables
 ================================= */
+*{
+    box-sizing: border-box;
+}
 :root {
   --text-color: #333;
   --bg-light: #ffffff;
