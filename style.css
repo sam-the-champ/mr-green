@@ -8,6 +8,8 @@ body{
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;
+  justify-content: center;
+  align-items: center;
   
    
 }
@@ -48,17 +50,17 @@ body.dark {
   font-size: 0.9rem;
 }
 .preliminary{
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     margin-bottom: 0;
 }
 .just-you{
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 .main-section{
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     height: 180px;
     width: 180px;
@@ -108,7 +110,7 @@ svg {
 
 
 .the-btn{
-     max-width: 500px;
+     max-width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@ svg {
     color: white;
 }
 .saved-c02{
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
      display: flex;
     justify-content: space-between;
