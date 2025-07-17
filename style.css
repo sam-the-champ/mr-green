@@ -63,6 +63,11 @@ body.dark .percentage-increase .the-p{
  body.dark .the-link{
     color: #2ecc71;
  }
+ body.dark .links{
+    background-color: var(--bg-dark);
+    border-top: 2px solid #30384a;
+
+ }
 
 /* ===============================
    Header
@@ -308,9 +313,9 @@ svg {
   width: 100%;
   align-items: center;
   text-align: center;
-  background-color: var(--bg-dark); /* or your preferred background */
+  background-color: var(--bg-light); /* or your preferred background */
   padding: 0.5rem 0;
-  border-top: 1px solid #ccc;
+  border-top: 2px solid var(--accent-green);
     z-index: 1000;
 
 }
@@ -367,7 +372,7 @@ svg {
     width: 100%;
     align-items: center;
     text-align: center;
-     border-top: 3px solid #5e5c5c;
+     border-top: 2px solid var(--accent-green);
     z-index: 1000;
    }
    .links > div {
