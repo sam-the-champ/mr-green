@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body> 
+    <!-- here is the header, where i have the logo and the welcome message -->
+    <header class="dashboard-header">
+         <div class="logo">🌿 GreenScore</div>
+         </div>
+         <div class="toggle-container">
+            <button id="theme-toggle">🌙 Dark Mode</button>
+          </div>
+    </header>
+
+     <section class="preliminary">
+        <div class="user-info">
+        <div class="welcome"><h2>Welcome back, <span id="userName">User</span> 👋</h2></div>
+        <div class="date" id="todayDate">Monday, July 15, 2025</div>
+        <div class="progress-circle" id="scoreCircle" data-score="65">
+     </section>
+      <section class="just-you">
+         <P>Today's GreenScore</P>
+      </section>
+
+     <section class="main-section">
+        <div class="progress-circle" id="scoreCircle" data-score="65">
+        <svg viewBox="0 0 36 36">
+    <!-- Background circle -->
+        <path class="bg" d="M18 2.0845
+        a15.9155 15.9155 0 0 1 0 31.831
+        a15.9155 15.9155 0 0 1 0 -31.831"/>
+    
+    <!-- Progress circle; stroke-dasharray will be updated via JS -->
+        <path class="progress" id="progressPath" d="M18 2.0845
+        a15.9155 15.9155 0 0 1 0 31.831
+        a15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+    
+    <!-- Score text centered within the circle -->
+        <text x="18" y="20.35" class="score-text" id="scoreText">
+          <tspan id="scoreValue" x="18" dy="-3" font-weight="700">0</tspan>
+          <tspan id="scoreLabel" x="18" dy="1.6em" font-weight="normal">out of 100</tspan>
+     </text>
+     </svg>
+      </div>
+    </section>
+
+    <section class="the-btn">
+        <div class="btn-container">
+    <button id="sweet-btn">poor</button>
+    </div>
+    </section>
+
+
+    <section class="saved-c02">
+             <div class="icon-wrapper">
+                 <i class="fas fa-leaf leaf-icon"></i>
+             </div>
+
+            <div class="saved">
+            <p className="">You saved</p>
+            <p className="">{savedCO2} kg CO₂ today</p>
+            </div>
+             <div className="percentage-increase"><p class="the-p">
+               +12% vs. avg</p>
+            </div>
+    </section>
+
+      <div class="chart-container">
+      <h3 class="chart-title">Last 7 Days</h3>
+      <canvas id="trendChart"></canvas>
+      </div>
+
+      <section class="log-section">
+        <div class="first-div">
+            <div class="first-div-1">
+                 <i class="fas fa-leaf leaf-icon"></i>
+                  <p className="">You saved</p>
+            </div>
+            <div class="first-div-2">
+                 <i class="fas fa-leaf leaf-icon"></i>
+                 <p className="">You saved</p>
+            </div>
+        </div>
+        <div class="second-div">
+             <div class="second-div-1">
+                 <i class="fas fa-leaf leaf-icon"></i>
+                  <p className="">You saved</p>
+            </div>
+            <div class="second-div-2">
+                 <i class="fas fa-leaf leaf-icon"></i>
+                 <p className="">You saved</p>
+            </div>
+        </div>
+      </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
