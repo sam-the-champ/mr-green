@@ -139,13 +139,13 @@ svg {
 .bg {
   fill: none;
   stroke: var(--circle-bg);
-  stroke-width: 3.5;
+  stroke-width: 4;
 }
 
 .progress {
   fill: none;
   stroke: var(--accent-green);
-  stroke-width: 3.5;
+  stroke-width: 4;
   stroke-linecap: round;
   transition: stroke 0.3s ease;
 }
