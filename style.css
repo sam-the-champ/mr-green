@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 80px;
 }
 
 /* Dark Mode */
@@ -299,6 +300,9 @@ svg {
 }
 
 .links {
+     position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: space-between; /* evenly spaced but respects equal widths */
   width: 100%;
@@ -306,6 +310,9 @@ svg {
   text-align: center;
   background-color: var(--bg-dark); /* or your preferred background */
   padding: 0.5rem 0;
+  border-top: 1px solid #ccc;
+    z-index: 1000;
+
 }
     
 
@@ -351,11 +358,17 @@ svg {
     gap: 1rem;
   }
   .links{
-    display: flex;
+    
+     position: fixed;
+    bottom: 0;
+      left: 0;
+     display: flex;
     justify-content: space-evenly;
     width: 100%;
     align-items: center;
     text-align: center;
+     border-top: 3px solid #5e5c5c;
+    z-index: 1000;
    }
    .links > div {
   flex: 1; /* ensures each link takes equal space */
