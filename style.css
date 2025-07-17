@@ -192,6 +192,8 @@ svg {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .icon-wrapper {
