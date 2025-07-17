@@ -294,6 +294,10 @@ svg {
   .main-section {
     flex-direction: row;
   }
+  .para{
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .log-section {
     flex-direction: row;
     flex-wrap: wrap;
