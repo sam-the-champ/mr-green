@@ -36,6 +36,29 @@ body.dark {
 body.dark .score-text {
   fill: #ffffff;
 }
+body.dark .saved-c02{
+    background-color: #30384a;
+    fill: #ffffff;
+}
+body.dark .percentage-increase .the-p{
+    background-color: var(--bg-dark);
+}
+ body.dark .first-div-1 {
+      background-color: #30384a;
+    fill: #ffffff;
+ }
+ body.dark .first-div-2{
+      background-color: #30384a;
+    fill: #ffffff;
+ }
+ body.dark .second-div-1{
+      background-color: #30384a;
+    fill: #ffffff;
+ }
+ body.dark .second-div-2{
+      background-color: #30384a;
+    fill: #ffffff;
+ }
 
 /* ===============================
    Header
