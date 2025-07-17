@@ -59,6 +59,9 @@ body.dark .percentage-increase .the-p{
       background-color: #30384a;
     fill: #ffffff;
  }
+ body.dark .the-link{
+    color: #2ecc71;
+ }
 
 /* ===============================
    Header
@@ -294,6 +297,23 @@ svg {
     text-align: end;
     
 }
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.the-link{
+     color: var(--bg-dark);
+    text-decoration: none;
+}
+.the-link:hover{
+     color: green;
+}
+.the-link.active{
+    color: #2ecc71;
+}
 
 /* ===============================
    Responsive Design
@@ -315,4 +335,12 @@ svg {
     flex: 1 1 100%;
     gap: 1rem;
   }
+  .links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+   }
+
 }
