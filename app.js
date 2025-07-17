@@ -1,4 +1,12 @@
+// all these for home page
 
+// auto select active page
+const currentPath = window.location.pathname;
+document.querySelectorAll('.the-link').forEach(link => {
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('active');
+  }
+});
   // Dark/Light Mode Toggle
 const toggleBtn = document.getElementById('theme-toggle');
 

@@ -297,16 +297,31 @@ svg {
     text-align: end;
     
 }
-.links{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
-    text-align: center;
+
+.links {
+  display: flex;
+  justify-content: space-between; /* evenly spaced but respects equal widths */
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-dark); /* or your preferred background */
+  padding: 0.5rem 0;
 }
-.the-link{
-     color: var(--bg-dark);
-    text-decoration: none;
+    
+
+.links > div {
+  flex: 1; /* ensures each link takes equal space */
+  text-decoration: none;
+}
+.the-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-dark);
+  text-decoration: none;
+  font-size: 0.85rem;
+  gap: 4px;
 }
 .the-link:hover{
      color: green;
@@ -342,5 +357,9 @@ svg {
     align-items: center;
     text-align: center;
    }
+   .links > div {
+  flex: 1; /* ensures each link takes equal space */
+  text-decoration: none;
+}
 
 }
