@@ -302,6 +302,10 @@ svg {
   .main-section {
     flex-direction: row;
   }
+  .quick-log{
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .log-section {
     flex-direction: row;
     flex-wrap: wrap;
