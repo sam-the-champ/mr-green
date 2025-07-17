@@ -4,6 +4,11 @@
 *{
     box-sizing: border-box;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 :root {
   --text-color: #333;
   --bg-light: #ffffff;
