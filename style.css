@@ -269,6 +269,7 @@ svg {
 .second-div {
   display: flex;
   justify-content: space-evenly;
+  
   gap: 1rem;
 }
 .first-div{
