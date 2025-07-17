@@ -100,6 +100,7 @@ body.dark .percentage-increase .the-p{
 .the-btn,
 .saved-c02,
 .chart-container,
+.quick-log,
 .log-section {
   width: 100%;
   max-width: 500px;
@@ -252,6 +253,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: -10px;
 }
 
 .first-div,
@@ -275,6 +277,10 @@ svg {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+.quick-log{
+    display: flex;
+    justify-content: space-between;
+}
 .link-text{
     text-decoration: none;      /* removes underline */
   color: inherit;             /* uses parent text color */
@@ -295,11 +301,6 @@ svg {
 @media (min-width: 600px) {
   .main-section {
     flex-direction: row;
-  }
-  .para{
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
   .log-section {
     flex-direction: row;
