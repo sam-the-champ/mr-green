@@ -127,8 +127,8 @@ body.dark .percentage-increase .the-p{
 }
 
 .progress-circle {
-  height: 180px;
-  width: 180px;
+  height: 250px;
+  width: 250px;
 }
 
 svg {
@@ -139,13 +139,13 @@ svg {
 .bg {
   fill: none;
   stroke: var(--circle-bg);
-  stroke-width: 2.5;
+  stroke-width: 4;
 }
 
 .progress {
   fill: none;
   stroke: var(--accent-green);
-  stroke-width: 2.5;
+  stroke-width: 4;
   stroke-linecap: round;
   transition: stroke 0.3s ease;
 }
@@ -171,7 +171,7 @@ svg {
 }
 
 #sweet-btn {
-  margin-top: 30px;
+  margin-top: 17px;
   height: 32px;
   width: 110px;
   border-radius: 20px;
@@ -238,6 +238,11 @@ svg {
   margin-bottom: 0.75rem;
 }
 
+/* ====================
+    quick log section
+    ================== */
+ 
+
 /* ===============================
    Log Section
 ================================= */
@@ -253,6 +258,9 @@ svg {
   justify-content: space-evenly;
   gap: 1rem;
 }
+.first-div{
+    margin-top: -10px;
+}
 
 .first-div-1,
 .first-div-2,
@@ -264,6 +272,19 @@ svg {
   width: 48%;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.link-text{
+    text-decoration: none;      /* removes underline */
+  color: inherit;             /* uses parent text color */
+  font-weight: 500;           /* optional for better visual */
+  cursor: pointer;
+  color: #2ecc71;
+  
+  
+}
+.para{
+    text-align: end;
+    
 }
 
 /* ===============================
