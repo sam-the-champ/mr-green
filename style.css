@@ -1,85 +1,103 @@
-/* ---------- ROOT COLORS FOR EASY THEMING ---------- */
+/* ===============================
+   Root Theme Variables
+================================= */
 :root {
   --text-color: #333;
   --bg-light: #ffffff;
   --bg-dark: #1a202c;
-  --text-light: #ffffff;
   --accent-green: #2ecc71;
-  --icon-bg: rgba(46, 204, 113, 0.2);
+  --circle-bg: #e0e0e0;
+  --font-main: 'Inter', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-main);
   color: var(--text-color);
-  justify-content: center;
-  align-items: center;
   background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Dark Mode */
 body.dark {
   background-color: var(--bg-dark);
-  color: var(--text-light);
+  color: #fff;
+}
+body.dark .score-text {
+  fill: #ffffff;
 }
 
-.dark-mode .score-text {
-  fill: var(--text-light);
-}
-
-/* ---------- HEADER, BUTTONS, GENERAL LAYOUT ---------- */
+/* ===============================
+   Header
+================================= */
 .dashboard-header {
+  width: 100%;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 .toggle-container {
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 20px;
 }
 
 #theme-toggle {
-  padding: 10px 15px;
+  padding: 8px 14px;
   background: #fff;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   font-weight: bold;
-  font-size: 0.9rem;
+  cursor: pointer;
 }
 
-/* ---------- CONTAINERS ---------- */
+/* ===============================
+   Welcome Section
+================================= */
 .preliminary,
 .just-you,
+.main-section,
 .the-btn,
 .saved-c02,
 .chart-container,
 .log-section {
-  max-width: 550px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
-/* ---------- SCORE CIRCLE ---------- */
+.welcome {
+  font-size: 1.2rem;
+}
+
+#todayDate {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===============================
+   Score Circle
+================================= */
 .main-section {
-  height: 180px;
-  width: 180px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  height: 180px;
+  width: 180px;
 }
 
 svg {
@@ -89,7 +107,7 @@ svg {
 
 .bg {
   fill: none;
-  stroke: #e0e0e0;
+  stroke: var(--circle-bg);
   stroke-width: 2.5;
 }
 
@@ -105,84 +123,82 @@ svg {
   font-size: 0.2em;
   text-anchor: middle;
   dominant-baseline: middle;
+  font-family: var(--font-main);
 }
 
 #scoreValue {
   font-size: 0.6rem;
 }
 
-/* ---------- BUTTON ---------- */
-#sweet-btn {
-  margin-top: 30px;
-  height: 30px;
-  width: 100px;
-  border-radius: 20px;
-  border: none;
-  color: white;
-  margin-bottom: 30px;
+/* ===============================
+   Score Label Button
+================================= */
+.the-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ---------- SAVED CO2 ---------- */
-.saved-c02 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bg-light);
-  border-radius: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height: 15vh;
-  padding: 0 20px;
+#sweet-btn {
+  margin-top: 30px;
+  height: 32px;
+  width: 110px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  background-color: var(--accent-green);
+  font-weight: bold;
+}
 
+/* ===============================
+   Saved CO2 Card
+================================= */
+.saved-c02 {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .icon-wrapper {
   width: 48px;
   height: 48px;
+  background-color: rgba(46, 204, 113, 0.2);
   border-radius: 50%;
-  background-color: var(--icon-bg);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .leaf-icon {
   color: var(--accent-green);
-  width: 22px;
-  height: 22px;
+  font-size: 22px;
 }
 
-.the-p {
-  background-color: rgb(246, 245, 245);
-  padding: 5px 10px;
+.saved p {
+  margin: 0;
+}
+
+#savedCO2Text {
+  font-weight: 600;
+}
+
+.percentage-increase .the-p {
+  background-color: #f6f5f5;
+  padding: 6px 12px;
   border-radius: 5px;
   font-size: 12px;
+  font-weight: bold;
 }
 
-/* ---------- STAT CARD LAYOUT ---------- */
-.first-div, .second-div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 12px;
-}
-
-.first-div-1, .first-div-2,
-.second-div-1, .second-div-2 {
-  flex: 1 1 calc(50% - 20px);
-  max-width: calc(50% - 20px);
-  background-color: var(--bg-light);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  text-align: center;
-  height: 15vh;
-}
-
-/* ---------- CHART ---------- */
+/* ===============================
+   Chart
+================================= */
 .chart-container {
-  height: 250px;
-  margin: 0 auto 82px;
+  margin-top: 1rem;
 }
 
 .chart-title {
@@ -191,39 +207,48 @@ svg {
   margin-bottom: 0.75rem;
 }
 
+/* ===============================
+   Log Section
+================================= */
 .log-section {
-  margin-top: 20px;
-  margin-bottom: 80px;
-  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* ---------- MEDIA QUERIES FOR MOBILE ---------- */
-@media (max-width: 600px) {
-  .first-div-1, .first-div-2,
-  .second-div-1, .second-div-2 {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+.first-div,
+.second-div {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
 
+.first-div-1,
+.first-div-2,
+.second-div-1,
+.second-div-2 {
+  background-color: var(--bg-light);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 48%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+@media (min-width: 600px) {
   .main-section {
-    width: 150px;
-    height: 150px;
+    flex-direction: row;
   }
-
-  .chart-container {
-    height: 200px;
+  .log-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
-  .dashboard-header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #theme-toggle {
-    font-size: 0.8rem;
-  }
-
-  .chart-title {
-    text-align: center;
+  .first-div, .second-div {
+    flex: 1 1 100%;
+    gap: 1rem;
   }
 }
