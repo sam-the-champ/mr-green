@@ -298,7 +298,7 @@ svg {
 .link-text{
     text-decoration: none;      /* removes underline */
   color: inherit;             /* uses parent text color */
-  font-weight: 500;           /* optional for better visual */
+  font-weight: 600;           /* optional for better visual */
   cursor: pointer;
   color: #2ecc71;
   
