@@ -156,3 +156,78 @@ toggleBtn.addEventListener('click', () => {
     data: data,
     options: options
   });
+
+
+//   log js
+
+
+  
+
+
+//   document.addEventListener('DOMContentLoaded', function () {
+//   // Show only the food content on load
+//   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+//   document.getElementById('food').classList.add('active');
+// });
+
+// function showCategory(categoryId, buttonElement) {
+//   // Hide all tab contents
+//   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+//   // Show selected tab content
+//   document.getElementById(categoryId).classList.add('active');
+
+//   // Remove active class from all buttons
+//   document.querySelectorAll('.category-tabs .tab').forEach(tab => tab.classList.remove('active'));
+
+//   // Add active class to clicked tab
+//   buttonElement.classList.add('active');
+// }
+ // Run after the DOM is loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+      tab.classList.remove('active');
+    });
+
+    // Show only food tab content
+    const foodTab = document.getElementById('food');
+    foodTab.style.display = 'block';
+    foodTab.classList.add('active');
+
+    // Remove .active class from all tab buttons (just to be safe)
+    document.querySelectorAll('.category-tabs .tab').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Add .active to the Food button
+ document.getElementById('foodBtn').classList.add('active');
+  });
+
+  function showCategory(categoryId, buttonElement) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+      tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.category-tabs .tab').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    const activeTab = document.getElementById(categoryId);
+    activeTab.style.display = 'block';
+    activeTab.classList.add('active');
+
+    buttonElement.classList.add('active');
+  }
+
+
+
+
+
+
+
+
+
+

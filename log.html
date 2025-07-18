@@ -10,13 +10,495 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="log-body" onload="showCategory('food')">
      <header class="dashboard-header">
     <div class="logo">🌿 GreenScore</div>
     <div class="toggle-container">
       <button id="theme-toggle">🌙 Dark Mode</button>
     </div>
   </header>
+      <section class="just-you">
+        <h2>Log Activity</h2>
+      </section>
+  
+  <!-- Category Tabs -->
+  <!-- <div class="category-tabs">
+    <button class="tab active" data-category="food" onclick="showCategory('food')"><i class="fas fa-utensils log-icon" ></i>Food</button>
+    <button class="tab" data-category="transport" onclick="showCategory('transport')"><i class="fas fa-car-side log-icon"></i>Transport</button>
+    <button class="tab" data-category="energy" onclick="showCategory('energy')"> <i class="fas fa-bolt log-icon"></i>Energy</button>
+    <button class="tab" data-category="shopping" onclick="showCategory('shopping')"><i class="fas fa-shopping-bag log-icon"></i>Shopping</button>
+  </div> -->
+  <!-- Category Tabs -->
+<!-- <div class="category-tabs">
+  <button class="tab active" onclick="showCategory('food', this)">
+    <i class="fas fa-utensils log-icon"></i>Food
+  </button>
+  <button class="tab" onclick="showCategory('transport', this)">
+    <i class="fas fa-car-side log-icon"></i>Transport
+  </button>
+  <button class="tab" onclick="showCategory('energy', this)">
+    <i class="fas fa-bolt log-icon"></i>Energy
+  </button>
+  <button class="tab" onclick="showCategory('shopping', this)">
+    <i class="fas fa-shopping-bag log-icon"></i>Shopping
+  </button>
+</div> -->
+<!-- Category Tabs -->
+<div class="category-tabs">
+  <button class="tab" onclick="showCategory('food', this)">
+    <i class="fas fa-utensils log-icon"></i>Food
+  </button>
+  <button class="tab" onclick="showCategory('transport', this)">
+    <i class="fas fa-car-side log-icon"></i>Transport
+  </button>
+  <button class="tab" onclick="showCategory('energy', this)">
+    <i class="fas fa-bolt log-icon"></i>Energy
+  </button>
+  <button class="tab" onclick="showCategory('shopping', this)">
+    <i class="fas fa-shopping-bag log-icon"></i>Shopping
+  </button>
+</div>
+<!-- Tabs -->
+
+
+<!-- Tab Contents -->
+<div id="food" class="tab-content">
+   <div class="activity-grid"> 
+      <!-- Card 1 -->
+         <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;"> Beef Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Chiken Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegetarian Meal</span>
+                <span class="impact-type" id="impact1" style="color: red; font-size: 11.5px; font-weight: 800;" >Low Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegan Meal</span>
+                <span class="impact-type" id="impact1" style="color: green; font-size: 11.5px; font-weight: 800">High Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+    </div>
+</div>
+
+<!-- transportation -->
+
+<div id="transport" class="tab-content">
+    <div class="activity-grid"> 
+      <!-- Card 1 -->
+         <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;"> Beef Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Chiken Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegetarian Meal</span>
+                <span class="impact-type" id="impact1" style="color: red; font-size: 11.5px; font-weight: 800;" >Low Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegan Meal</span>
+                <span class="impact-type" id="impact1" style="color: green; font-size: 11.5px; font-weight: 800">High Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+    </div>
+</div>
+
+<!-- energy -->
+<div id="energy" class="tab-content">
+    <div class="activity-grid"> 
+     <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;"> Beef Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Chiken Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegetarian Meal</span>
+                <span class="impact-type" id="impact1" style="color: red; font-size: 11.5px; font-weight: 800;" >Low Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegan Meal</span>
+                <span class="impact-type" id="impact1" style="color: green; font-size: 11.5px; font-weight: 800">High Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+    </div>
+</div>
+
+<!-- shopping -->
+<div id="shopping" class="tab-content">
+    <div class="activity-grid"> 
+    <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;"> Beef Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Chiken Meal</span>
+                <span class="impact-type" id="impact1" style="color: orange; font-size: 11.5px; font-weight: 800;">Medium</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegetarian Meal</span>
+                <span class="impact-type" id="impact1" style="color: red; font-size: 11.5px; font-weight: 800;" >Low Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+          <div class="activity-card">
+             <div class="card-header">
+                <span class="item-name" style="font-weight: 700; font-size: small;">Vegan Meal</span>
+                <span class="impact-type" id="impact1" style="color: green; font-size: 11.5px; font-weight: 800">High Impact</span>
+            </div>
+                <div class="card-footer">
+                   <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+                   <button class="log-btn" onclick="logUsage('White Rice')" style="background-color: rgb(237, 236, 236);">Log</button>
+                </div>
+         </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+  <!-- Activities -->
+  <!-- Grid of Cards -->
+<!-- <div id="food" class="category-content">
+<div class="activity-grid">  -->
+  <!-- Card 1 -->
+  <!-- <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">White Rice</span>
+      <span class="impact-type" id="impact1">Medium</span> -->
+      
+    <!-- </div>
+    <div class="card-footer">
+        <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('White Rice')">Log</button>
+      
+    </div>
+  </div>  -->
+
+  <!-- Card 2 -->
+  <!-- <div class="activity-card">
+    <div class="card-header">
+        <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+     <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+     <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+    </div>
+  </div>   
+   <!-- Add two more cards similarly for this category -->
+<!-- </div> -->
+
+<!-- transport -->
+ <!-- <div id="transport" class="category-content">
+  <div class="activity-grid">
+    Transport Cards go here -->
+      <!-- <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">White Rice</span>
+      <span class="impact-type" id="impact1">Medium</span>
+      
+    </div>
+    <div class="card-footer">
+        <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('White Rice')">Log</button>
+      
+    </div>
+  </div> -->
+
+  <!-- Card 2 -->
+  <!-- <div class="activity-card">
+    <div class="card-header">
+        <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+     <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+     <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+    </div>
+  </div>
+  </div> -->
+<!-- </div> -->
+
+<!-- energy -->
+<!-- <div id="energy" class="category-content">
+  <div class="activity-grid"> -->
+    <!-- Energy Cards go here -->
+      <!-- <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">White Rice</span>
+      <span class="impact-type" id="impact1">Medium</span>
+      
+    </div>
+    <div class="card-footer">
+        <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('White Rice')">Log</button>
+      
+    </div>
+  </div> -->
+
+  <!-- Card 2 -->
+  <!-- <div class="activity-card">
+    <div class="card-header">
+        <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span> -->
+<!--       
+    </div>
+    <div class="card-footer">
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+     <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+     <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div> -->
+
+   <!-- <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+    </div>
+  </div>
+  </div>
+</div> -->
+
+<!-- Shopping Category -->
+<!-- <div id="shopping" class="category-content">
+  <div class="activity-grid"> -->
+    <!-- Shopping Cards go here -->
+      <!-- <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">White Rice</span>
+      <span class="impact-type" id="impact1">Medium</span>
+      
+    </div>
+    <div class="card-footer">
+        <span class="co2-emission" id="emission1">2.5kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('White Rice')">Log</button>
+      
+    </div>
+  </div> -->
+
+
+  <!-- Card 2 -->
+  <!-- <div class="activity-card">
+    <div class="card-header">
+        <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span> -->
+      
+    <!-- </div>
+    <div class="card-footer">
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div>
+
+   <div class="activity-card">
+    <div class="card-header">
+     <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span> -->
+      
+    <!-- </div>
+    <div class="card-footer">
+     <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      
+    </div>
+  </div> -->
+<!-- 
+   <div class="activity-card">
+    <div class="card-header">
+      <span class="item-name">Vegetables</span>
+      <span class="impact-type" id="impact2">Low</span>
+      
+    </div>
+    <div class="card-footer">
+      <button class="log-btn" onclick="logUsage('Vegetables')">Log</button>
+      <span class="co2-emission" id="emission2">0.8kg CO₂</span>
+    </div>
+  </div>
+  </div>
+</div> -->
+
+
+
+
 
     <section class="links">
     <div>
