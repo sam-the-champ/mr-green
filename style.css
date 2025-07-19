@@ -49,6 +49,10 @@ body.dark .saved-c02{
     background-color: #30384a;
     fill: #ffffff;
 }
+body.dark .the-challenges{
+       background-color: #30384a;
+    fill: #ffffff;
+}
 body.dark .percentage-increase .the-p{
     background-color: var(--bg-dark);
 }
@@ -357,7 +361,45 @@ svg {
 .the-link.active{
     color: #2ecc71;
 }
-
+.the-challenge{
+     background-image: url(/images/let\ change.jpg);
+     background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  margin: 20px auto;
+  width: 90%;
+  height: 40vh;
+  max-width: 450px;
+  
+}
+.the-challenges{
+    background-color: var(--bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  padding: 1rem;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 500px;
+}
+.invite-btn{
+    text-align: center;
+   
+}
+.inv-btn{
+      background-color: var(--accent-green);
+    color: #ffffff;
+    width: 90%;
+    height: 30px;
+    font-weight: 700;
+    border: none;
+    border-radius: 28px;
+    box-shadow: var(--bg-dark);
+    
+}
 /* ==============================
    syles for log.html
    =========================== */
