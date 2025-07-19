@@ -99,9 +99,8 @@ body.dark .percentage-increase .the-p{
   align-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+.logo img {
+  height: 48px;
 }
 
 .toggle-container {
