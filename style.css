@@ -81,6 +81,7 @@ body.dark .percentage-increase .the-p{
  }
  body.dark .log-btn{
     background-color: var(--bg-dark);
+    color: #fff;
  }
 
 /* ===============================
