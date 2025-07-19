@@ -385,6 +385,12 @@ svg {
   width: 95%;
   max-width: 500px;
 }
+.the-challenges p {
+    font-size: 12px;
+}
+.the-challenges h2{
+    font-size: 14px;
+}
 .invite-btn{
     text-align: center;
    
