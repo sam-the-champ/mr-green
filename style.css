@@ -96,17 +96,17 @@ body.dark .percentage-increase .the-p{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .logo img {
    height: 100px;
   width: auto;
   display: block;
-  padding: 0px;
+  
 }
 
 .toggle-container {
-  top: 10px;
   right: 20px;
 }
 .toggle-container button{
