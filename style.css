@@ -16,6 +16,9 @@ html, body {
 .log-body{
     padding-bottom: 160px; 
 }
+.action-body{
+   padding-bottom: 160px; 
+}
 :root {
   --text-color: #333;
   --bg-light: #ffffff;
@@ -87,7 +90,12 @@ body.dark .percentage-increase .the-p{
     background-color: var(--bg-dark);
     color: #fff;
  }
-
+body.dark .main-text{
+  color: white;
+}
+body.dark .weekly-challenges{
+  background-color: #30384a;
+}
 /* ===============================
    Header
 ================================= */
@@ -542,44 +550,6 @@ svg {
 .co2-emission{
     font-size: 11.5px;
 }
-/* .food-challenge{
-         background-image: url(/images/green\ 1.jpg);
-     background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
-  margin: 20px auto;
-  margin-top: 150px;
-  width: 90%;
-  height: 36vh;
-  max-width: 450px;
-  z-index: 1;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-.food-challenge::before{
-    content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
-  /* z-index: 0;
-} */
-/* .food-challenge > * {
-  position: relative;
-  z-index: 5; /* place content above overlay */
-/* }
-.food-challenge p{
- font-style: italic;   
-} */ 
 
 .empty-space{
     height: 40px;
@@ -609,6 +579,96 @@ svg {
    /* ==============================
    syles for plan.html
    =========================== */
+   .action-section-one {
+         margin: 0 auto;
+         width: 100%;
+         max-width: 500px;
+   }
+   .action-section-one p{
+    font-size: 14px;
+    color: grey;
+    margin-top: -10px;
+   }
+   .header{
+      font-weight: 800;
+       margin: 0 auto;
+         width: 100%;
+         max-width: 500px;
+         margin-bottom: -15px;
+   }
+   .weekly-challenges{
+       background-color: var(--bg-light);
+       border-radius: 8px;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 1rem;
+        margin: 20px auto;
+         width: 95%;
+         max-width: 500px;
+   }
+   .colored-bg{
+    background-color: #dbece2;
+    color: #2ecc71;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+   }
+   .main-text{
+      font-weight: 550;
+      color: var(--bg-dark);
+   }
+   .plan-div-one{
+    display: flex;
+    justify-content: space-between;
+   }
+   .just-here{
+    font-size: 14px;
+    color: grey;
+    margin-top: -5px;
+   }
+   .icon-text {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.8px;
+  color: var(--accent-green);
+}
+
+.icon-text i {
+  margin-right: 0.25rem; /* same as Tailwind's mr-1 */
+  font-size: 14px;
+  color: var(--accent-green);
+}
+.total-days{
+  font-size: 13px;
+}
+.skill-progress-bg {
+  background: rgb(237, 234, 234);
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  
+}
+.skill-progress-fill {
+  background: var(--accent-green);
+  height: 100%;
+  border-radius: inherit;
+}
+.badge{
+  font-weight: 600;
+       margin: 0 auto;
+         width: 100%;
+         max-width: 500px;
+         margin-bottom: -15px;
+}
+.badge-section{
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
    /* ==============================
    syles for community.html
    =========================== */
