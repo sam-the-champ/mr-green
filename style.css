@@ -96,6 +96,9 @@ body.dark .main-text{
 body.dark .weekly-challenges{
   background-color: #30384a;
 }
+body.dark .community-ranking{
+  background-color: #30384a;
+}
 /* ===============================
    Header
 ================================= */
@@ -677,6 +680,118 @@ svg {
    /* ==============================
    syles for community.html
    =========================== */
+   .map-icon{
+        font-size: 20px;
+  color: red; /* or your preferred color */
+  vertical-align: middle;
+   }
+   .trophy-icon{
+  font-size: 20px;
+  color: gold;
+   }
+  .individuals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+  font-family: sans-serif;
+}
+
+/* Left-side group: rank, image, and name */
+.individuals > .rank,
+.individuals > .rank-img,
+.individuals > .rank-text {
+  margin-right: 8px; /* small spacing */
+}
+
+.rank {
+  font-weight: bold;
+  width: 20px;
+  text-align: right;
+}
+
+.rank-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rank-text {
+  white-space: nowrap;
+}
+
+/* Push score to far right */
+.score1 {
+  margin-left: auto;
+  font-weight: bold;
+  background-color: #2ecc71;
+  border-radius: 10px;
+  padding: 3px;
+}
+.score2{
+    margin-left: auto;
+  font-weight: bold;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 3px;
+}
+.score3{
+    margin-left: auto;
+  font-weight: bold;
+  background-color:orange;
+  border-radius: 10px;
+  padding: 3px;
+}
+.score4{
+    margin-left: auto;
+  font-weight: bold;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 3px;
+}
+.score5{
+    margin-left: auto;
+  font-weight: bold;
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.community-ranking{
+     background-color: var(--bg-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  padding: 1rem;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 500px;
+  justify-content: center;
+}
+.community-ranking-text{
+  width: 98%;
+  background-color: #dbece2;
+  border-radius: 10px;
+  padding-right: 3px;
+ 
+}
+.community-ranking-text p{
+  margin-left: 5px;
+  padding-left: 10px;
+  
+}
+.first-p{
+  padding-top: 10px;
+  margin-bottom: -5px;
+  color: var(--accent-green);
+}
+.second-p{
+  font-size: 14px;
+  padding-bottom: 5px;
+  color: grey;
+}
    /* ==============================
    syles for report.html
    =========================== */
