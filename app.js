@@ -246,7 +246,7 @@ scheduleMidnightUpdate(); // Schedule updates at midnight
 
   // for invite button
   document.getElementById("invitation").addEventListener("click", function () {
-    const inviteLink = "https://myapp.com/invite?ref=12345"; // replace with dynamic user ID
+    const inviteLink = "https://mr-green-sam-9h6n.vercel.app/"; // replace with dynamic user ID
 
     if (navigator.share) {
         navigator.share({
