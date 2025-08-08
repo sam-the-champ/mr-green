@@ -40,6 +40,28 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
+// function to update the date
+
+ function updateDate() {
+  const today = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('date').textContent = today.toLocaleDateString('en-US', options);
+}
+// shedule time update at midnight
+function scheduleMidnightUpdate() {
+  const now = new Date();
+  const msUntilMidnight = 
+    new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime() - now.getTime();
+
+  setTimeout(() => {
+    updateDate();
+    scheduleMidnightUpdate();
+  }, msUntilMidnight);
+}
+updateDate(); // Show the date immediately
+scheduleMidnightUpdate(); // Schedule updates at midnight
+
+
   document.addEventListener('DOMContentLoaded', () => {
     const circle = document.getElementById('scoreCircle');
     const score = parseInt(circle.getAttribute('data-score'), 10);
@@ -50,7 +72,7 @@ toggleBtn.addEventListener('click', () => {
     let current = 0;
     const duration = 1500; // milliseconds
     const frameRate = 60;
-    const totalFrames = Math.round(duration / (600 / frameRate));
+    const totalFrames = Math.round(duration / (800 / frameRate));
     let frame = 0;
 
     const animate = () => {
