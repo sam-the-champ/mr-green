@@ -244,6 +244,24 @@ scheduleMidnightUpdate(); // Schedule updates at midnight
     buttonElement.classList.add('active');
   }
 
+  // for invite button
+  document.getElementById("invitation").addEventListener("click", function () {
+    const inviteLink = "https://myapp.com/invite?ref=12345"; // replace with dynamic user ID
+
+    if (navigator.share) {
+        navigator.share({
+            title: "Join me on GreenScore!",
+            text: "Track your green impact and join the challenge!",
+            url: inviteLink
+        })
+        .then(() => console.log("Invite sent successfully"))
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+        // Fallback for browsers that don’t support navigator.share
+        alert("Copy this link and share with your friends: " + inviteLink);
+    }
+});
+
 
 
 
