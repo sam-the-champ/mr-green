@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, 
+    #004d00, 
+    #006600, 
+    #009933, 
+    #00cc44, 
+    #33ff77, 
+    #66ff99);
+  background-size: 400% 400%;
+  animation: bgMove 10s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.onboarding-container {
+  max-width: 100%;
+  width: 250px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  height: 350px;
+}
+
+/* Slides */
+.slide {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Icons */
+.slide-icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#skip-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+#next-btn {
+  background: white;
+  color: #4caf50;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
